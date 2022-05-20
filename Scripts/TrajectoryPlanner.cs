@@ -125,7 +125,7 @@ public class TrajectoryPlanner : MonoBehaviour
     public void PublishJoints()
     {
         var request = new MoverServiceRequest();
-        request.joints_input = CurrentJointConfig();
+        request.joints_input = CurrentJointConfig(); // instead of assigning the values individually.
 
         // Pick Pose
         request.pick_pose = new PoseMsg
